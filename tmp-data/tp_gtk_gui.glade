@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.4.5 on Mon Jul 14 23:51:37 2008 -->
+<glade-interface>
+  <widget class="GtkAboutDialog" id="about">
+    <property name="border_width">5</property>
+    <property name="title" translatable="yes">About ThinkPad fan control</property>
+    <property name="resizable">False</property>
+    <property name="window_position">GTK_WIN_POS_CENTER_ON_PARENT</property>
+    <property name="type_hint">GDK_WINDOW_TYPE_HINT_DIALOG</property>
+    <property name="skip_taskbar_hint">True</property>
+    <property name="skip_pager_hint">True</property>
+    <property name="has_separator">False</property>
+    <property name="program_name">ThinkPad fan control</property>
+    <property name="version">0.5</property>
+    <property name="copyright" translatable="yes">Copyright © 2008 Stanko Tadić</property>
+    <property name="website">http://stanko.mfhinc.net/projects.php</property>
+    <property name="website_label" translatable="yes">http://stanko.mfhinc.net/projects.php</property>
+    <property name="license" translatable="yes">ThinkPad fan control is free software; you can redistribute it 
+and/or modify it under the terms of the GNU General Public License 
+version 2 as published by the Free Software Foundation.  
+Note that I am not granting permission to redistribute or 
+modify ThinkPad fan control under the terms of any later version of the 
+General Public License.
+
+ThinkPad fan control is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program (in the file "LICENCE"); if not, write to the
+Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
+MA 02111, USA.</property>
+    <property name="authors">Stanko Tadić</property>
+    <property name="logo">logo.png</property>
+    <child internal-child="vbox">
+      <widget class="GtkVBox" id="dialog-vbox1">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <placeholder/>
+        </child>
+        <child internal-child="action_area">
+          <widget class="GtkHButtonBox" id="dialog-action_area1">
+            <property name="visible">True</property>
+            <property name="layout_style">GTK_BUTTONBOX_END</property>
+            <child>
+              <widget class="GtkButton" id="button1">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="label" translatable="yes">Close</property>
+                <property name="response_id">0</property>
+                <signal name="clicked" handler="gtk_widget_hide" object="about"/>
+              </widget>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">GTK_PACK_END</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkWindow" id="window">
+    <property name="title" translatable="yes">ThinkPad fan control</property>
+    <property name="resizable">False</property>
+    <property name="window_position">GTK_WIN_POS_CENTER</property>
+    <property name="default_width">500</property>
+    <property name="icon">icon.png</property>
+    <property name="gravity">GDK_GRAVITY_CENTER</property>
+    <property name="opacity">0.5</property>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <child>
+          <widget class="GtkMenuBar" id="menubar1">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkMenuItem" id="menuitem1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_File</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="imagemenuitem5">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">gtk-quit</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="gtk_widget_destroy" object="window"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="menuitem4">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Help</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu3">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImageMenuItem" id="imagemenuitem10">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">gtk-about</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                        <signal name="activate" handler="gtk_widget_show" object="about"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="optionsLabel">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Current options: 120, 60, 55, full-speed</property>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkTable" id="table1">
+            <property name="visible">True</property>
+            <property name="n_rows">5</property>
+            <property name="n_columns">3</property>
+            <property name="column_spacing">10</property>
+            <property name="row_spacing">5</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <widget class="GtkHButtonBox" id="hbuttonbox1">
+                <property name="visible">True</property>
+                <child>
+                  <widget class="GtkButton" id="run">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="has_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="label" translatable="yes">Change options</property>
+                    <property name="response_id">0</property>
+                  </widget>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="hide">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="label" translatable="yes">To tray</property>
+                    <property name="response_id">0</property>
+                  </widget>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkButton" id="exit">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="label" translatable="yes">Exit</property>
+                    <property name="response_id">0</property>
+                  </widget>
+                  <packing>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </widget>
+              <packing>
+                <property name="right_attach">3</property>
+                <property name="top_attach">4</property>
+                <property name="bottom_attach">5</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label3">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Safe temperature:</property>
+              </widget>
+              <packing>
+                <property name="right_attach">2</property>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+                <property name="x_options">GTK_FILL</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Critical temperature:</property>
+              </widget>
+              <packing>
+                <property name="right_attach">2</property>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+                <property name="x_options">GTK_FILL</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Sleep time:</property>
+              </widget>
+              <packing>
+                <property name="right_attach">2</property>
+                <property name="x_options">GTK_FILL</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSpinButton" id="sleep">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="adjustment">120 1 1000 5 10 10</property>
+              </widget>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="right_attach">3</property>
+                <property name="x_options"></property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSpinButton" id="critical">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="adjustment">60 40 100 1 10 10</property>
+              </widget>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="right_attach">3</property>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+                <property name="x_options"></property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSpinButton" id="safe">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="adjustment">55 30 100 1 10 10</property>
+              </widget>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="right_attach">3</property>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+                <property name="x_options"></property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label6">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Use this speed when temperature is critical:</property>
+              </widget>
+              <packing>
+                <property name="right_attach">2</property>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkComboBox" id="autoSpeed">
+                <property name="visible">True</property>
+                <property name="items" translatable="yes">auto
+1
+2
+3
+4
+5
+6
+7
+full speed</property>
+              </widget>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="right_attach">3</property>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="level">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Fans level - auto</property>
+            <property name="justify">GTK_JUSTIFY_CENTER</property>
+          </widget>
+          <packing>
+            <property name="padding">10</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkTable" id="table2">
+            <property name="visible">True</property>
+            <property name="n_rows">1</property>
+            <property name="n_columns">3</property>
+            <child>
+              <widget class="GtkButton" id="speedButton">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="label" translatable="yes">Change speed</property>
+                <property name="response_id">0</property>
+              </widget>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="right_attach">3</property>
+                <property name="y_options"></property>
+                <property name="x_padding">15</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label4">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Manual control</property>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkComboBox" id="speed">
+                <property name="visible">True</property>
+                <property name="items" translatable="yes">auto
+1
+2
+3
+4
+5
+6
+7
+full speed</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="log">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">WELCOME!
+This is fan control program for IBM/Lenovo ThinkPads</property>
+            <property name="justify">GTK_JUSTIFY_CENTER</property>
+          </widget>
+          <packing>
+            <property name="padding">10</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkStatusbar" id="statusbar">
+            <property name="visible">True</property>
+            <property name="spacing">2</property>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">6</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>

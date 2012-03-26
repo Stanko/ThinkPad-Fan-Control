@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.4.5 on Wed Jul  9 20:26:54 2008 -->
+<glade-interface>
+  <widget class="GtkWindow" id="window">
+    <property name="title" translatable="yes">ThinkPad ultimate fan control</property>
+    <property name="resizable">False</property>
+    <property name="gravity">GDK_GRAVITY_CENTER</property>
+    <signal name="destroy" handler="on_window_destroy"/>
+    <child>
+      <widget class="GtkVBox" id="vbox2">
+        <property name="visible">True</property>
+        <property name="spacing">5</property>
+        <child>
+          <widget class="GtkTable" id="table1">
+            <property name="visible">True</property>
+            <property name="n_rows">4</property>
+            <property name="n_columns">2</property>
+            <property name="column_spacing">10</property>
+            <property name="row_spacing">5</property>
+            <child>
+              <widget class="GtkButton" id="exit">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="label" translatable="yes">Exit</property>
+                <property name="response_id">0</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
+                <property name="y_options"></property>
+                <property name="x_padding">14</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="run">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="label" translatable="yes">Check</property>
+                <property name="response_id">0</property>
+              </widget>
+              <packing>
+                <property name="top_attach">3</property>
+                <property name="bottom_attach">4</property>
+                <property name="y_options"></property>
+                <property name="x_padding">30</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSpinButton" id="safe">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="adjustment">55 30 100 1 10 10</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+                <property name="x_options"></property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSpinButton" id="critical">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="adjustment">60 40 100 1 10 10</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+                <property name="x_options"></property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkSpinButton" id="sleep">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="adjustment">120 0 1000 5 10 10</property>
+              </widget>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="right_attach">2</property>
+                <property name="x_options"></property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label3">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Safe temperature:</property>
+              </widget>
+              <packing>
+                <property name="top_attach">2</property>
+                <property name="bottom_attach">3</property>
+                <property name="x_options">GTK_FILL</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Critical temperature:</property>
+              </widget>
+              <packing>
+                <property name="top_attach">1</property>
+                <property name="bottom_attach">2</property>
+                <property name="x_options">GTK_FILL</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Sleep time:</property>
+              </widget>
+              <packing>
+                <property name="x_options">GTK_FILL</property>
+                <property name="y_options"></property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="level">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Fans level - auto</property>
+          </widget>
+          <packing>
+            <property name="fill">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkStatusbar" id="statusbar">
+            <property name="visible">True</property>
+            <property name="spacing">2</property>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
