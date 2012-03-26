@@ -52,14 +52,11 @@ The program has two modes - automatic and manual. The manual mode can't be easie
 to use - just choose the speed and click the "Change speed" button.
 
 The automatic mode is a bit more complicated. There are four options you can change:
-* Sleep time - how often the program will check for the CPU
-  temperature (default - 120s).
-* Critical temperature - the program will speed up the fans
-  when this temperature is reached (default - 55C).
-* Safe temperature - the program will switch the fans to normal when the
-  temperature is lower than this (default - 50C)
-* Fan level speed - the speed of fans when the CPU reaches the critical 
-  temperature (default - 7).
+
+* Sleep time - how often the program will check for the CPUtemperature (default - 120s).
+* Critical temperature - the program will speed up the fans when this temperature is reached (default - 55C).
+* Safe temperature - the program will switch the fans to normal when the temperature is lower than this (default - 50C)
+* Fan level speed - the speed of fans when the CPU reaches the critical temperature (default - 7).
  
 If you would like to customise these options, just click the 
 "Change options button"
