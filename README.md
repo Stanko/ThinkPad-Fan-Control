@@ -29,6 +29,7 @@ COMPILATION
 ---------------------
 You will need GTK development libraries. The Makefile that is available can
 be used like:
+
     make
 
 There is also a pre-compiled binary available for i386, 32-bit machines.
