@@ -1,8 +1,12 @@
 ThinkPad Fan Control
 ============================
-
 Version 0.5
 
+Unfortunately this project is NOT in the active development
+---------------------
+
+I don't own a ThinkPad laptop for years now, and I don't plan to continue development on this. 
+Feel free to check forks fine people made or issue a pull request. Thank you for your understanding.
 
 
 INTRODUCTION
